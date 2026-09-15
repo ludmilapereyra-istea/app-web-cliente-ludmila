@@ -3,99 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Catálogo de productos Apple: MacBook, iPhone, iPad, Apple Watch y más.">
-    <title>Apple Store | Catálogo de Productos</title>
+    <meta name="description" content="Tienda ecommerce de Cliente Ludmila">
+    <title>Cliente Ludmila - Tienda</title>
 </head>
 <body>
-
     <header>
-        <h1>Apple Store</h1>
-        <nav aria-label="Navegación principal">
+        <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+
+        <div class="buscador">
+            <form action="#" method="get" role="search">
+                <label for="busqueda">Buscar productos</label>
+                <input type="search" id="busqueda" name="q" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
 
-    <main id="inicio">
+    <main>
+        <section id="filtros">
+            <h2>Filtros</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Categoría</legend>
+                    <label><input type="checkbox" name="categoria" value="ropa"> Ropa</label>
+                    <label><input type="checkbox" name="categoria" value="accesorios"> Accesorios</label>
+                    <label><input type="checkbox" name="categoria" value="calzado"> Calzado</label>
+                </fieldset>
 
-        <aside aria-label="Filtros de categorías">
-            <h2>Categorías</h2>
-            <nav aria-label="Filtros de productos">
-                <ul>
-                    <li><a href="#catalogo">Todos los productos</a></li>
-                    <li><a href="#macbook">MacBook</a></li>
-                    <li><a href="#iphone">iPhone</a></li>
-                    <li><a href="#ipad">iPad</a></li>
-                    <li><a href="#watch">Apple Watch</a></li>
-                    <li><a href="#airpods">AirPods</a></li>
-                    <li><a href="#accesorios">Accesorios</a></li>
-                </ul>
-            </nav>
-        </aside>
+                <fieldset>
+                    <legend>Precio</legend>
+                    <label for="precio-min">Mínimo</label>
+                    <input type="number" id="precio-min" name="precio_min" min="0" step="0.01">
+                    <label for="precio-max">Máximo</label>
+                    <input type="number" id="precio-max" name="precio_max" min="0" step="0.01">
+                </fieldset>
 
-        <section id="catalogo" aria-label="Catálogo de productos">
-            <h2>Catálogo de productos</h2>
+                <fieldset>
+                    <legend>Talla</legend>
+                    <label><input type="radio" name="talla" value="s"> S</label>
+                    <label><input type="radio" name="talla" value="m"> M</label>
+                    <label><input type="radio" name="talla" value="l"> L</label>
+                    <label><input type="radio" name="talla" value="xl"> XL</label>
+                </fieldset>
 
-            <article id="macbook">
-                <h3><a href="producto.html">MacBook Air M3</a></h3>
-                <p>Notebook ultradelgado con chip M4, 13 pulgadas.</p>
-                <p>Precio: $1.199.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de MacBook Air M3">Ver detalle &rarr;</a></p>
-            </article>
-
-            <article id="iphone">
-                <h3><a href="producto.html">iPhone 15 Pro</a></h3>
-                <p>Smartphone con chip A17 Pro, cámara de 48MP y titanio.</p>
-                <p>Precio: $1.599.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de iPhone 15 Pro">Ver detalle &rarr;</a></p>
-            </article>
-
-            <article id="ipad">
-                <h3><a href="producto.html">iPad Air</a></h3>
-                <p>Tablet con chip M2, pantalla Liquid Retina de 11 pulgadas.</p>
-                <p>Precio: $999.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de iPad Air">Ver detalle &rarr;</a></p>
-            </article>
-
-            <article id="watch">
-                <h3><a href="producto.html">Apple Watch Series 9</a></h3>
-                <p>Reloj inteligente con GPS y detección de accidentes.</p>
-                <p>Precio: $549.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de Apple Watch Series 9">Ver detalle &rarr;</a></p>
-            </article>
-
-            <article id="airpods">
-                <h3><a href="producto.html">AirPods Pro 2</a></h3>
-                <p>Auriculares inalámbricos con cancelación activa de ruido.</p>
-                <p>Precio: $349.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de AirPods Pro 2">Ver detalle &rarr;</a></p>
-            </article>
-
-            <article id="accesorios">
-                <h3><a href="producto.html">Magic Mouse</a></h3>
-                <p>Mouse inalámbrico recargable con Multi-Touch.</p>
-                <p>Precio: $129.000</p>
-                <p><a href="producto.html" aria-label="Ver detalle de Magic Mouse">Ver detalle &rarr;</a></p>
-            </article>
-
+                <button type="submit">Aplicar filtros</button>
+                <button type="reset">Limpiar</button>
+            </form>
         </section>
 
+        <section id="destacados">
+            <h2>Productos destacados</h2>
+
+            <article class="producto">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto 1.</p>
+                <p class="precio">$29.99</p>
+                <button type="button">Añadir al carrito</button>
+            </article>
+
+            <article class="producto">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto 2.</p>
+                <p class="precio">$49.99</p>
+                <button type="button">Añadir al carrito</button>
+            </article>
+
+            <article class="producto">
+                <h3>Producto 3</h3>
+                <p>Descripción breve del producto 3.</p>
+                <p class="precio">$19.99</p>
+                <button type="button">Añadir al carrito</button>
+            </article>
+        </section>
+
+        <section id="productos">
+            <h2>Todos los productos</h2>
+        </section>
     </main>
 
-    <footer id="contacto">
-        <p>&copy; 2026 Apple Store. Todos los derechos reservados.</p>
-        <nav aria-label="Redes sociales">
-            <ul>
-                <li><a href="https://instagram.com/apple" rel="noopener noreferrer" target="_blank">Instagram</a></li>
-                <li><a href="https://x.com/apple" rel="noopener noreferrer" target="_blank">X (Twitter)</a></li>
-                <li><a href="https://youtube.com/apple" rel="noopener noreferrer" target="_blank">YouTube</a></li>
-            </ul>
-        </nav>
+    <footer>
+        <p>&copy; 2026 Cliente Ludmila. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>
